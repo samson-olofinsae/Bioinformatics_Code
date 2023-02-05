@@ -48,3 +48,36 @@ Two_A <- read_csv("hust_293A_AZD6738.csv", TRUE, "")
 
 Testdata <- rbind(R_A, R_V, H_V, H_A, HC_V, M_A, Two_A)
 view(Testdata)
+
+#save the Testdata in the current directory as "Transformed_data.csv"
+
+write.table(Testdata, file = "Transformed_data.csv", row.names = F, sep = ",")
+
+dir()
+
+#Question 3b: How many cell lines are in the datasets
+
+
+Transformed_data <- read_csv("Transformed_data.csv", TRUE, "")
+
+
+# use the n_dinstinct () function
+
+n_distinct(Transformed_data$Treatment)
+
+
+# In the ‘Treatment’ column, there are 10 separate values. There are 10 treatments
+
+View(Transformed_data)
+
+# Question_3c
+
+Treatment_hits <- Transformed_data %>%
+  select(GENE, normZ, FDR, Treatment) %>%
+  filter (normZ <= 2.5 & FDR < 0.1)
+View(Treatment_hits)
+
+# Number of hits for each treatments
+table(Treatment_hits['Treatment'])
+
+
