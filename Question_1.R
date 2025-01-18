@@ -9,7 +9,6 @@ library(dplyr)
 # Read-in all data
 
 # for Olivieri et al. 2020
-
 Olivieri <- read_csv("Olivieri.csv", TRUE, "")
 
 # Read-in data Hustedt et al. 2019 for individual data for each cell-line treatment pair
