@@ -63,7 +63,6 @@ Transformed_data <- read_csv("Transformed_data.csv", TRUE, "")
 
 n_distinct(Transformed_data$Treatment)
 
-
 # In the ‘Treatment’ column, there are 10 separate values. There are 10 treatments
 
 View(Transformed_data)
