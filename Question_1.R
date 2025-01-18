@@ -57,7 +57,6 @@ dir()
 
 #Question 3b: How many cell lines are in the datasets
 
-
 Transformed_data <- read_csv("Transformed_data.csv", TRUE, "")
 
 
